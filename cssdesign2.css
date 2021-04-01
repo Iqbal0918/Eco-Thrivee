@@ -1,0 +1,136 @@
+header img {
+    height: 80px;
+    margin-left: 35px;
+}
+
+h2{
+font-style: italic;
+
+}
+
+header {
+    background-color:Black;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    align-items: center;
+    box-shadow: 0 0 25px 0 rgb(11, 160, 43);
+}
+
+header ul li {
+display: inline;
+margin: 20px;
+
+}
+
+header li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+background-color: rgb(78, 78, 75);
+border-radius: 40px;
+}
+
+body {
+    height: 100%;
+    background-size: cover;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 80px;
+    padding: 30px;
+    background-image: url('img/bamboo2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
+}
+
+main img{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  max-height: 500px;
+
+}
+
+
+
+
+
+
+footer {
+    background-color: rgb(39, 37, 37);
+    color: white;
+    margin-top: 40px;
+display: grid;
+grid-template-columns: auto auto;
+padding: 20px;
+}
+
+.picture2 img {
+      width: 100%;
+      max-width: 300px;
+      max-height: 400px;
+    }
+
+
+    #flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: normal;
+        align-items: normal;
+        align-content: normal;
+        margin: 10px;
+      }
+      
+      .flex-items:nth-child(1) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+      }
+      
+      .flex-items:nth-child(2) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+      }
+      
+      .flex-items:nth-child(3) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+      }
+
+
+      @media (max-width: 800px) {
+body{
+font-size: 5px;
+
+}
+
+
+
+
+      }
+
+
+
+
+
+    

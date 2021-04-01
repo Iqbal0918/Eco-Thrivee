@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manufacturers">
+    <title>Eco-Thrive Sri Lanka</title>
+    <link rel="stylesheet" href="design1.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body>
+    <div id="container">
+        <header>
+          <h1>ECO-Thrive</h1>
+        </header>
+        <nav class="mainNav">
+          <ul>
+              <li><a href="index.html"><span class="navText">Home</span></a></li>
+              <li><a href="product.html"><span class="navText">Products</span></a></li>
+              <li><a href="manvac.html"><span class="navText">Manufacturers</span></a></li>
+              <li><a href="Contact.html"><span class="navText">Contact</span></a></li>
+              <li><a href="buynow.html"><span class="navText">Buy Now</span></a></li>
+          </ul>
+        </nav>
+
+    </div>
+    
+    <section>
+        <div class="container">
+            <div class="products_container">
+                    <form name="Eco-ProductForm" id="Form" onsubmit="return; false">
+                        <div id="form_container">
+                            <div class="form_1">
+                                <div class="section"><span>1</span>Manufacturers</div>
+                                <div class="inside-wrap">
+                                    <label><input type="radio"  name="SelectedCompanies" id="SelectedCompanies" value="Eco-ProductsSL" onclick="getTotalPrice(); cCompanies()" /> Eco-Products SL <span class="price">LKR 0</span></label>
+                                    <label><input type="radio"  name="SelectedCompanies" id="SelectedCompanies" value="EcoWare" onclick="getTotalPrice(); cCompanies()" /> Ecoware Sri Lanka <span class="price">LKR 0</span></label>
+                                    <label><input type="radio"  name="SelectedCompanies" id="SelectedCompanies" value="Trickledown" onclick="getTotalPrice(); cCompanies()" />Trickledown<span class="price">LKR 0</span></label>
+                                    <label><input type="radio"  name="SelectedCompanies" id="SelectedCompanies" value="Backtoearth" onclick="getTotalPrice(); cCompanies()" /> BacktoEarth <span class="price">LKR 0</span></label>
+                                </div>
+                            </div>
+                            <div class="form_2">
+                                <div class="section"><span>2</span>Size</div>
+                                <div class="inside-wrap">
+                                    <label><input type="radio"  name="Sizes" value="Small" onclick="getTotalPrice(); cSize()"/> Small <span class="price">LKR 0</span></label>
+                                    <label><input type="radio"  name="Sizes" value="Medium" onclick="getTotalPrice(); cSize()"/> Medium <span class="price">LKR 2500</span></label>
+                                    <label><input type="radio"  name="Sizes" value="Large" onclick="getTotalPrice(); cSize()"/> Large <span class="price">LKR 5000</span></label>
+                                </div>
+                            </div>
+        
+                            <div class="form_1">
+                                <div class="section"><span>3</span>Products</div>
+                                <div class="inside-wrap">
+                                    <label> 
+                                        <select id="Product" name='Product' onchange="getTotalPrice(); cProduct()">
+                                        <option value="None">Select Product</option>
+                                        <option id="default1" value="Mugs">Mugs - LKR 2500</option>
+                                        <option value="Plates">plates- LKR 2000</option>
+                                        <option value="Bags">Bags - LKR 1000</option>
+                                        <option value="None">Soap - LKR 800</option>
+
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+        
+                            <div class="form_2">
+                                <div class="section"><span>4</span>Extras</div>
+                                <div class="inside-wrap">
+                                    <select id="Extras" name='Extras' onchange="getTotalPrice(); cExtras()">
+                                        <option value="None">Select Extras</option>
+                                        <option value="Packaging">Eco-Packaging LKR 500</option>
+                                        <option value="Card">Eco-GreetingCard- LKR 1000</option>
+                                        <option value="Decos">Eco-Decos - LKR 1500</option>
+                                    </select>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="form_btn">
+                            <button type="reset" class="buy_btn" id="addorder">Add to Order</button>
+                            <button type="reset" class="buy_btn" id="addFav">Add to Favourites</button>    
+                        </div>
+                    </form>
+                    <br>
+                    <div id="formCurrent">
+                        <h2 class="form_header">Current Order</h2>
+                        <div class="form_wrap">
+                            <div class="form_box">
+                                <label>Brand</label>
+                                <input readonly class="box_2" type="text" name="cCompanies" id="cCompanies"/>
+                            </div>
+                            <div class="form_box">
+                                <label>Size</label>
+                                <input readonly class="box_2" type="text" name="cSize" id="cSize"/>
+                            </div>
+                            <div class="form_box">
+                                <label>Product</label>
+                                <input readonly class="box_2" type="text" name="cProduct" id="cProduct"/>
+                            </div>
+                            <div class="form_box">
+                                <label>Extras</label>
+                                <input readonly class="box_2" type="text" name="cExtras" id="cExtras"/>
+                            </div> 
+                        </div>
+                        <br>
+                        <div id="form_end" class="form_box">
+                            <label>Total Price</label>
+                            <input readonly class="box_2" type="text" name="cTotal" id="EcoTotalPrice"/>
+                        </div>   
+                    </div>
+                    <br>
+                    <div id="formFav">
+                        <h2 class="form_header">Favourites</h2>
+                        <div class="form_wrap">
+                            <div class="form_box">
+                                <label>Brand</label>
+                                <input readonly class="box_2" type="text" name="fCompanies" id="fCompanies"/>
+                            </div>
+                            <div class="form_box">
+                                <label>Size</label>
+                                <input readonly class="box_2" type="text" name="fSize" id="fSize"/>
+                            </div>
+                            <div class="form_box">
+                                <label>Product</label>
+                                <input readonly class="box_2" type="text" name="fProduct" id="fProduct"/>
+                            </div>
+                            <div class="form_box">
+                                <label>Extras</label>
+                                <input readonly class="box_2" type="text" name="fExtras" id="fExtras"/>
+                            </div> 
+                        </div>
+                        <br>
+                        <div id="form_end" class="form_box">
+                            <label>Total Price</label>
+                            <input readonly class="box_2" type="text" name="fTotal" id="fTotal"/>
+                        </div>
+                        <div id="form_box">
+                            <button type="submit" class="buy_btn" id="orderFav">Order Favourites</button>  
+                        </div>
+                    </div>
+                </div> 
+                <br>
+                <br>
+                <div>
+                    <h2 class="form_header">Overall Order</h2>
+                    <table id="tblOverallOrder">
+                            <tr>
+                                <th>Order No.</th>
+                                <th>Brand</th>
+                                <th>Size</th>
+                                <th>Product</th>
+                                <th>Extras</th>
+                                <th>Total Price</th>
+                            </tr>
+                    </table>    
+                    <br>
+                    <div class="form_total">
+                        <label> Total Price of Overall Order</label>
+                        <input readonly class="box" type="text" name="total" id="overallPrice"/>    
+                    </div>
+                    <br>
+                    <div class="form_btn">
+                        <button type="reset" class="buy_btn" id="placeOrder">Place Order</button>
+                        <button type="submit" class="buy_btn" id="checkLoyalty">Check Loyalty</button>    
+                    </div>
+                </div>
+            </div>
+    </section>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="scripts/main.js"></script>
+<script>
+  //check whether browser support service workers
+  if ('serviceWorker' in navigator) {
+      //wait until page loaded to avoid delaying rendering
+      window.addEventListener('load', function() {
+          //register service worker
+          navigator.serviceWorker.register('serviceworker.js').then(
+              function(registration) {
+                  console.log('Service worker registration successful', 
+                               registration);
+              }, 
+              function(err) {
+                  console.log('Service worker registration failed', err);
+          });
+      });
+  }
+  </script>
+ 
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footDetails">
+          <h2>Details</h2>
+          <p>Address:33/A,LilyAvenue,Wellawatte</p>
+          <p>Dev:Iqbal Shameer</p>
+        </div>
+        
+        
+        <div class="reference">
+          <h2>References</h2>
+          <p>backtoearth.lk</p>
+          <p>unsplash</p>
+          <p>ecoproductslk.com</p>
+          <p>trickledown.lk</p>
+        </div>   
+    </footer>
+    
+    
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

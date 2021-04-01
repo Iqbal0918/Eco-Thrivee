@@ -1,0 +1,120 @@
+header img {
+    height: 80px;
+    margin-left: 35px;
+}
+body {
+    height: 100%;
+    background-image: url('img/bamboo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 80px;
+    padding: 30px;
+
+}
+
+main {
+    color:white;
+}
+main h1{
+    color: white;
+}
+
+header {
+    background-color: white;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    align-items: center;
+    box-shadow: 0 0 25px 0 rgb(11, 160, 43);
+}
+
+header ul li {
+display: inline;
+margin: 20px;
+
+}
+
+header li a {
+    text-decoration: none;
+    color: green;
+}
+
+header nav li a:hover {
+background-color: greenyellow;
+border-radius: 10px;
+
+}
+
+main img
+{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  max-width: 500px;
+  max-height: 300px;
+}
+
+
+
+#flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    text-align: justify;
+    color:white;
+  }
+  
+  #flex-container h2 {
+      text-align:left
+  }
+  
+  .flex-item-left {
+    padding: 10px;
+    flex: 50%;
+  }
+  
+  .flex-item-right {
+    
+    padding: 10px;
+    flex: 50%;
+  }
+
+
+  @media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  }
+
+
+  footer {
+    font-style:unset;
+    text-align: center;
+    font-size: large;
+    color:whitesmoke;
+}
+
+.picture2 img{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width:100%;
+max-height: 500px;
+
+}
+
+
+
+
+
+
+
+  
